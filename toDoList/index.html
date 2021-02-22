@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDoList</title>
+    <link rel="stylesheet" href="../node_modules/normalize.css/normalize.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./css/toDoList_header.css">
+    <link rel="stylesheet" href="./css/toDoList_todo.css">
+    <link rel="stylesheet" href="./css/toDoList_doneList.css">
+</head>
+<body>
+    <div class="header">
+        <div class="container">
+            <a href="#" class="logo" title="ToDoList">Xu's ToDoList</a>
+            <input type="text" aria-describedby="addon-wrapping" placeholder="请输入想做的事" aria-label="请输入想做的事" class="form-control" name="" id="todo">
+        </div>
+    </div>
+    <div class="toDo">
+        <div class="container">
+            <ul class="toDoList">
+                <h2 class="font-weight-bolder">正在进行</h2>
+            </ul>
+            <ul class="DoneList">
+                <h2 class="font-weight-bolder">已完成</h2>
+            </ul>
+        </div>
+    </div>
+
+
+
+
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="./js/todoList.js"></script>
+    <script src="./js/doneList.js"></script>
+</body>
+</html>

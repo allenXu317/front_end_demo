@@ -1,0 +1,61 @@
+.toDo {
+    margin-top: 30px;
+}
+
+.toDoList {
+    margin-bottom: 5px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid gray;
+}
+
+.toDoItem-Base {
+    display: none;
+    position: relative;
+    list-style: none;
+    font-size: 20px;
+    border: 1px solid black;
+    border-left: 10px solid green;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+    margin-bottom: 5px;
+}
+.toDoItem:hover {
+    cursor: pointer;
+    box-shadow: 0 0 5px gray;
+}
+
+.toDoCheck {
+    display: inline-block;
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    top: 50%;
+    transform: translate(0, -50%);
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+.toDoItem {
+    width: 800px;
+    height: 50px;
+}
+
+.text {
+    display: inline-block;
+    position: absolute;
+    /* height: 25px; */
+    top: 50%;
+    transform: translate(40px, -50%);
+    font-size: 25px;
+}
+
+.icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translate(0,-50%);
+}
+
+.del:hover {
+    color: red;
+}
