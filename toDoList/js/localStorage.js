@@ -24,7 +24,10 @@ export function toStorage() {
 
 export function getLocalStorage() {
   let itemLists = JSON.parse(localStorage.getItem("todo"));
-  console.log(itemLists);
+  // console.log(itemLists);
+  if (itemLists == null) {
+    return 0;
+  }
   itemLists.forEach((item) => {
     if (!item.done) {
       let li = $(`<li class="toDoItem toDoItem-Base"></li>`);
