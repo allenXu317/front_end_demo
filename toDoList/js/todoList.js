@@ -1,4 +1,7 @@
+import { toStorage,getLocalStorage } from "./localStorage.js";
+
 $(function () {
+  getLocalStorage();
   $("#todo").on("change", function () {
     let li = $(`<li class="toDoItem toDoItem-Base"></li>`);
     addCheckBox(li);
@@ -9,6 +12,7 @@ $(function () {
     addSpan(li, $(this).val());
     $(".toDoList").append(li);
     li.stop().slideDown();
+    toStorage();
   });
 
   function addCheckBox(ele) {

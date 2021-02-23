@@ -1,17 +1,20 @@
+import { toStorage } from "./localStorage.js";
 $(function () {
   $(".toDoList").on("click", ".toDoCheck", function () {
-    $(this).parent(".toDoItem").slideUp();
-    let item = $(this).parent(".toDoItem ").clone(true);
-    $(".DoneList").append(item.css("display","none"));
-    item.slideDown();
-    $(this).parent(".toDoItem ").remove();
+    switchItem(".toDoItem", ".DoneList", $(this));
+    toStorage();
   });
 
-  $(".DoneList").on("click",".toDoCheck",function() {
-    let item = $(this).parent(".toDoItem ").clone(true);
-    $(this).parent(".toDoItem ").slideUp();
-    $(".toDoList").append(item.css("display","none"));
+  $(".DoneList").on("click", ".toDoCheck", function () {
+    switchItem(".toDoItem", ".toDoList", $(this));
+    toStorage();
+  });
+
+  function switchItem(src, des, ele) {
+    let item = ele.parent(src).clone(true);
+    ele.parent(src).slideUp();
+    $(des).append(item.css("display", "none"));
     item.slideDown();
-    $(this).parent(".toDoItem ").remove();
-  })
+    ele.parent(src).remove();
+  }
 });
