@@ -25,12 +25,13 @@ $(function () {
     addDel(ele);
     ele.append(span);
   }
-
+  $(".del").on("click", function () {
+      $(this).parent(".toDoItem").slideUp();
+      $(this).parent(".toDoItem").remove();
+      toStorage();
+    });
   function addDel(ele) {
     let del = $(`<i class="icon bi bi-x del"></i>`);
-    del.on("click", function () {
-      $(this).parent(".toDoItem").slideUp();
-    });
     ele.append(del);
   }
 });

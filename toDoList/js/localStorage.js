@@ -24,8 +24,9 @@ export function toStorage() {
 
 export function getLocalStorage() {
   let itemLists = JSON.parse(localStorage.getItem("todo"));
+  console.log(itemLists);
   itemLists.forEach((item) => {
-    if (item.done) {
+    if (!item.done) {
       let li = $(`<li class="toDoItem toDoItem-Base"></li>`);
       addCheckBox(li);
       addSpan(li, item.todo);
